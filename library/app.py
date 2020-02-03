@@ -36,5 +36,11 @@ def create_app():
 
     return app
 
+wsapp = None
 
-run(create_app(), host="0.0.0.0", port=8080, debug=True)
+if __name__ == "__main__":
+    run(create_app(), host="0.0.0.0", port=8080, debug=True)
+else:
+    wsapp = create_app()
+
+#run(create_app(), host="0.0.0.0", port=8080, debug=True)
